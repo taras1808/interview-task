@@ -16,6 +16,7 @@ export const fetchTrades = async (req: Request, res: Response) => {
 
     res.send({ success: true });
   } catch (e) {
+    console.log(e);
     res.status(500).send({
       message: e instanceof Error ? e.message : "something went wrong",
     });
